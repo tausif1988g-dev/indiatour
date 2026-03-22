@@ -39,6 +39,9 @@ if (process.env.NODE_ENV !== 'production') {
 const frontendPath = path.join(__dirname, '..');
 app.use(express.static(frontendPath));
 
+// Serve Font Awesome locally
+app.use('/fa', express.static(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free')));
+
 // ============================================================
 // START: Initialize DB then mount routes
 // ============================================================
