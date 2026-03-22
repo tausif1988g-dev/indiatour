@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - India Tours & Travels</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-900 flex items-center justify-center p-4">
+
+  <!-- Background decorations -->
+  <div class="absolute top-20 left-20 w-48 h-48 bg-orange-400 rounded-full opacity-10 blur-3xl"></div>
+  <div class="absolute bottom-20 right-20 w-64 h-64 bg-green-300 rounded-full opacity-10 blur-3xl"></div>
+
+  <div class="w-full max-w-md relative z-10">
+    <!-- Logo -->
+    <div class="text-center mb-8">
+      <img src="../img/logo.svg" alt="India Tours Logo" class="w-20 h-20 rounded-2xl mx-auto mb-4 shadow-xl" />
+      <h1 class="text-2xl font-bold text-white">India Tours & Travels</h1>
+      <p class="text-green-300 text-sm mt-1">Admin Panel</p>
+    </div>
+
+    <!-- Login Card -->
+    <div class="bg-white rounded-2xl shadow-2xl p-8">
+      <div class="mb-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-1">Welcome Back</h2>
+        <p class="text-gray-500 text-sm">Sign in to manage your travel business</p>
+      </div>
+
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="mb-5">
+          <label class="form-label">Email Address</label>
+          <div class="relative">
+            <i class="fas fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+            <input
+              type="email"
+              id="loginEmail"
+              class="form-input pl-10"
+              placeholder="admin@indiatours.com"
+              value="admin@indiatours.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="form-label">Password</label>
+          <div class="relative">
+            <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+            <input
+              type="password"
+              id="loginPassword"
+              class="form-input pl-10 pr-10"
+              placeholder="Enter your password"
+              required
+            />
+            <button type="button" id="togglePassword"
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">
+              <i class="fas fa-eye text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="loginError" class="hidden mb-4">
+          <div class="alert alert-error">
+            <i class="fas fa-exclamation-circle"></i>
+            <span id="loginErrorMsg">Invalid email or password</span>
+          </div>
+        </div>
+
+        <button type="submit" id="loginBtn" class="w-full btn-primary py-3 text-base">
+          <i class="fas fa-sign-in-alt mr-2"></i> Sign In
+        </button>
+      </form>
+
+      <div class="mt-6 pt-6 border-t border-gray-100">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <p class="text-xs text-gray-500 font-medium mb-2">
+            <i class="fas fa-info-circle text-green-600 mr-1"></i> Default Credentials:
+          </p>
+          <p class="text-xs text-gray-600 font-mono">Email: admin@indiatours.com</p>
+          <p class="text-xs text-gray-600 font-mono">Password: admin123</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to site -->
+    <div class="text-center mt-6">
+      <a href="../index.html" class="text-green-300 hover:text-white text-sm transition-colors">
+        <i class="fas fa-arrow-left mr-1"></i> Back to Website
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = 'http://localhost:3000/api';
+
+    // Toggle password visibility
+    document.getElementById('togglePassword').addEventListener('click', function() {
+      const input = document.getElementById('loginPassword');
+      const icon = this.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'fas fa-eye-slash text-sm';
+      } else {
+        input.type = 'password';
+        icon.className = 'fas fa-eye text-sm';
+      }
+    });
+
+    // Check if already logged in
+    if (localStorage.getItem('adminToken')) {
+      window.location.href = 'dashboard.html';
+    }
+
+    async function handleLogin(event) {
+      event.preventDefault();
+      const btn = document.getElementById('loginBtn');
+      const errorDiv = document.getElementById('loginError');
+      const errorMsg = document.getElementById('loginErrorMsg');
+
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Signing in...';
+      btn.disabled = true;
+      errorDiv.classList.add('hidden');
+
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      try {
+        const response = await fetch(`${API_BASE}/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.token) {
+          localStorage.setItem('adminToken', data.token);
+          localStorage.setItem('adminEmail', email);
+          btn.innerHTML = '<i class="fas fa-check mr-2"></i> Success! Redirecting...';
+          btn.className = btn.className.replace('btn-primary', '') + ' bg-green-500 text-white py-3 rounded-lg w-full font-semibold text-base';
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 800);
+        } else {
+          throw new Error(data.error || 'Invalid credentials');
+        }
+      } catch (err) {
+        let message = err.message;
+        if (err.message === 'Failed to fetch') {
+          message = 'Cannot connect to server. Make sure the backend is running on port 3000.';
+        }
+        errorMsg.textContent = message;
+        errorDiv.classList.remove('hidden');
+        btn.innerHTML = '<i class="fas fa-sign-in-alt mr-2"></i> Sign In';
+        btn.disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>

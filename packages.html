@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kolkata Tour Packages - India Tours & Travels</title>
+  <meta name="description" content="Explore Kolkata with our handpicked tour packages. City tours, heritage walks, Sundarbans, Darjeeling and more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#166534', dark: '#14532d' },
+            saffron: { DEFAULT: '#ea580c', dark: '#c2410c' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-green-900 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="img/logo.svg" alt="India Tours Logo" class="w-10 h-10 rounded-full" />
+          <div>
+            <span class="text-white font-bold text-lg leading-tight block">India Tours</span>
+            <span class="text-orange-300 text-xs">& Travels</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link text-white text-sm font-medium">Home</a>
+          <a href="travel.html" class="nav-link text-white text-sm font-medium">Travel Booking</a>
+          <a href="packages.html" class="nav-link text-white text-sm font-medium active">Kolkata Tours</a>
+          <a href="hajj-umrah.html" class="nav-link text-white text-sm font-medium">Hajj & Umrah</a>
+        </div>
+        <div class="hidden md:flex">
+          <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all">
+            <i class="fas fa-phone"></i> Call Us
+          </a>
+        </div>
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+          <i id="menuIcon" class="fas fa-bars text-white text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu bg-green-900 border-t border-green-700 md:hidden">
+      <div class="px-4 py-3 space-y-1">
+        <a href="index.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-home mr-2"></i>Home</a>
+        <a href="travel.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-train mr-2"></i>Travel Booking</a>
+        <a href="packages.html" class="block text-white py-2 px-3 rounded-lg bg-green-700 text-sm font-medium"><i class="fas fa-suitcase mr-2"></i>Kolkata Tours</a>
+        <a href="hajj-umrah.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-mosque mr-2"></i>Hajj & Umrah</a>
+        <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 text-white px-3 py-2 rounded-lg text-sm font-medium mt-2"><i class="fas fa-phone"></i>+91 98765 43210</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="pt-16 bg-gradient-to-br from-green-900 via-green-800 to-green-900 py-16 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-5 right-20 w-40 h-40 bg-orange-400 rounded-full opacity-10 blur-3xl"></div>
+      <div class="absolute bottom-5 left-20 w-48 h-48 bg-green-300 rounded-full opacity-10 blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-orange-500 bg-opacity-20 border border-orange-400 text-orange-300 text-sm px-4 py-1 rounded-full mb-4">
+        <i class="fas fa-suitcase text-xs"></i> Explore Kolkata & Beyond
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-3">Kolkata Tour Packages</h1>
+      <p class="text-green-200 text-lg max-w-2xl mx-auto mb-6">
+        Discover the City of Joy — from iconic landmarks to untouched wilderness. Handpicked packages for every traveler.
+      </p>
+      <!-- Quick stats -->
+      <div class="flex flex-wrap justify-center gap-6 text-center">
+        <div class="text-white">
+          <div class="text-2xl font-bold text-orange-400">50+</div>
+          <div class="text-xs text-green-300">Tour Options</div>
+        </div>
+        <div class="text-white">
+          <div class="text-2xl font-bold text-orange-400">1-5</div>
+          <div class="text-xs text-green-300">Days Duration</div>
+        </div>
+        <div class="text-white">
+          <div class="text-2xl font-bold text-orange-400">₹1,500+</div>
+          <div class="text-xs text-green-300">Starting Price</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PACKAGES SECTION ===== -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-3 mb-8 items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">All Packages</h2>
+          <p class="text-gray-500 text-sm mt-1">Find the perfect tour for your schedule</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button class="filter-btn tab-btn active bg-green-700 text-white" data-filter="all" onclick="loadPackages('all')">
+            <i class="fas fa-th-large mr-1 text-xs"></i> All
+          </button>
+          <button class="filter-btn tab-btn bg-gray-100 text-gray-600" data-filter="1day" onclick="loadPackages('1day')">
+            <i class="fas fa-sun mr-1 text-xs"></i> 1 Day
+          </button>
+          <button class="filter-btn tab-btn bg-gray-100 text-gray-600" data-filter="2-3days" onclick="loadPackages('2-3days')">
+            <i class="fas fa-calendar mr-1 text-xs"></i> 2-3 Days
+          </button>
+          <button class="filter-btn tab-btn bg-gray-100 text-gray-600" data-filter="5plus" onclick="loadPackages('5plus')">
+            <i class="fas fa-calendar-week mr-1 text-xs"></i> 5+ Days
+          </button>
+        </div>
+      </div>
+
+      <!-- Packages Grid -->
+      <div id="packages-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="col-span-3 text-center py-12">
+          <div class="spinner"></div>
+          <p class="text-gray-500 mt-3">Loading packages...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY KOLKATA ===== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header">
+        <h2>Why Visit Kolkata?</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-landmark text-amber-700 text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Rich Heritage</h3>
+          <p class="text-gray-500 text-sm">Colonial architecture, temples, mosques, and historical landmarks</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-utensils text-red-700 text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Culinary Delight</h3>
+          <p class="text-gray-500 text-sm">Iconic street food — Rolls, Biryani, Mishti Doi, Rasgolla</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-tree text-green-700 text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Nature Nearby</h3>
+          <p class="text-gray-500 text-sm">Sundarbans mangroves and Darjeeling hills just hours away</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-palette text-purple-700 text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Arts & Culture</h3>
+          <p class="text-gray-500 text-sm">Museums, theatres, galleries, Durga Puja celebrations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="py-12 bg-green-800">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-white mb-3">Can't find what you're looking for?</h2>
+      <p class="text-green-200 mb-6">We offer custom tour packages tailored to your needs. Just ask!</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-400 transition-all">
+          <i class="fab fa-whatsapp text-xl"></i> WhatsApp for Custom Tour
+        </a>
+        <a href="tel:+919876543210" class="flex items-center gap-2 bg-white text-green-800 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-gray-300 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+              <i class="fas fa-map-marked-alt text-white"></i>
+            </div>
+            <div>
+              <span class="text-white font-bold text-lg block leading-tight">India Tours</span>
+              <span class="text-orange-400 text-xs">& Travels</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400">Your trusted travel partner since 2008.</p>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="w-9 h-9 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
+            <a href="https://wa.me/919876543210" class="w-9 h-9 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors"><i class="fab fa-whatsapp text-sm"></i></a>
+            <a href="#" class="w-9 h-9 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"><i class="fab fa-instagram text-sm"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-orange-400 transition-colors">Home</a></li>
+            <li><a href="travel.html" class="hover:text-orange-400 transition-colors">Travel Booking</a></li>
+            <li><a href="packages.html" class="hover:text-orange-400 transition-colors">Kolkata Packages</a></li>
+            <li><a href="hajj-umrah.html" class="hover:text-orange-400 transition-colors">Hajj & Umrah</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Popular Tours</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="text-gray-400">1 Day Kolkata City Tour</li>
+            <li class="text-gray-400">3 Days Heritage Tour</li>
+            <li class="text-gray-400">Sundarbans Weekend</li>
+            <li class="text-gray-400">Darjeeling + Kolkata</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><i class="fas fa-phone text-orange-400"></i><a href="tel:+919876543210" class="hover:text-orange-400">+91 98765 43210</a></li>
+            <li class="flex items-center gap-2"><i class="fab fa-whatsapp text-orange-400"></i><a href="https://wa.me/919876543210" class="hover:text-orange-400">WhatsApp Us</a></li>
+            <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-orange-400"></i><span>123 Park Street, Kolkata</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6">
+        <p class="text-sm text-gray-500 text-center">© 2026 India Tours & Travels. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-content">
+      <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-colors">
+        <i class="fas fa-times text-sm"></i>
+      </button>
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-calendar-check text-green-700 text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">Book This Package</h2>
+          <p class="text-gray-500 text-sm">We'll confirm within 30 minutes</p>
+        </div>
+      </div>
+      <form id="bookingForm" onsubmit="submitBooking(event)">
+        <div class="mb-4">
+          <label class="form-label">Selected Package</label>
+          <input type="text" id="modalPackageName" class="form-input bg-gray-50" readonly />
+        </div>
+        <div id="modalPriceContainer" class="hidden mb-4 p-3 bg-orange-50 rounded-lg border border-orange-100">
+          <p class="text-sm text-gray-600">Starting Price: <span id="modalPriceDisplay" class="font-bold text-orange-600 text-lg"></span></p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="form-label">Your Name *</label>
+            <input type="text" id="bookingName" class="form-input" placeholder="Full name" required />
+          </div>
+          <div>
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" id="bookingPhone" class="form-input" placeholder="+91 XXXXX" required />
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Travel Date & Details</label>
+          <textarea id="bookingDetails" class="form-input" rows="3" placeholder="Preferred travel date, number of persons, special requests..."></textarea>
+        </div>
+        <div id="bookingMessage"></div>
+        <div class="flex gap-3">
+          <button type="button" onclick="closeModal()" class="flex-1 py-3 border-2 border-gray-200 text-gray-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors">Cancel</button>
+          <button type="submit" class="flex-1 btn-primary py-3">
+            <i class="fas fa-paper-plane mr-2"></i> Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Access Button -->
+  <a href="admin/login.html" title="Admin Panel"
+     style="position:fixed;bottom:28px;left:24px;z-index:999;background:rgba(15,45,26,0.85);color:#86efac;border:1px solid rgba(134,239,172,0.3);backdrop-filter:blur(8px);padding:6px 14px;border-radius:50px;font-size:0.72rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all 0.3s;letter-spacing:0.3px;"
+     onmouseover="this.style.background='rgba(22,101,52,0.95)';this.style.color='#fff'"
+     onmouseout="this.style.background='rgba(15,45,26,0.85)';this.style.color='#86efac'">
+    <i class="fas fa-lock" style="font-size:0.65rem;"></i> Admin
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

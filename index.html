@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India Tours & Travels - Explore Incredible India</title>
+  <meta name="description" content="Book tours, travel tickets, Hajj & Umrah packages with India Tours & Travels. Best prices guaranteed." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#166534', dark: '#14532d', light: '#22c55e' },
+            saffron: { DEFAULT: '#ea580c', dark: '#c2410c', light: '#fb923c' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white">
+
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement-bar">
+    <div class="marquee-container">
+      <span class="marquee-track">
+        &nbsp;&nbsp;&nbsp;<i class="fas fa-moon mr-1"></i> Hajj 2026 Registrations Open — Limited Seats! &nbsp;|&nbsp;
+        <i class="fas fa-tag mr-1"></i> Special Umrah packages from ₹85,000 &nbsp;|&nbsp;
+        <i class="fas fa-plane mr-1"></i> Kolkata to Jeddah flights included &nbsp;|&nbsp;
+        <i class="fas fa-phone mr-1"></i> Call now: <a href="tel:+919876543210">+91 98765 43210</a> &nbsp;|&nbsp;
+        <i class="fas fa-map-marked-alt mr-1"></i> Sundarbans tour — only ₹6,000/person &nbsp;|&nbsp;
+        <i class="fas fa-moon mr-1"></i> Hajj 2026 Registrations Open — Limited Seats! &nbsp;|&nbsp;
+        <i class="fas fa-tag mr-1"></i> Special Umrah packages from ₹85,000 &nbsp;|&nbsp;
+        <i class="fas fa-plane mr-1"></i> Kolkata to Jeddah flights included &nbsp;|&nbsp;
+        <i class="fas fa-phone mr-1"></i> Call now: <a href="tel:+919876543210">+91 98765 43210</a> &nbsp;|&nbsp;
+        <i class="fas fa-map-marked-alt mr-1"></i> Sundarbans tour — only ₹6,000/person &nbsp;&nbsp;&nbsp;
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar fixed left-0 right-0 z-50 bg-green-900 shadow-lg" style="top: 34px;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="img/logo.svg" alt="India Tours Logo" class="w-10 h-10 rounded-full" />
+          <div>
+            <span class="text-white font-bold text-lg leading-tight block">India Tours</span>
+            <span class="text-orange-300 text-xs">& Travels</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link text-white text-sm font-medium active">Home</a>
+          <a href="travel.html" class="nav-link text-white text-sm font-medium">Travel Booking</a>
+          <a href="packages.html" class="nav-link text-white text-sm font-medium">Kolkata Tours</a>
+          <a href="hajj-umrah.html" class="nav-link text-white text-sm font-medium">Hajj & Umrah</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all">
+            <i class="fas fa-phone"></i> Call Us
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+          <i id="menuIcon" class="fas fa-bars text-white text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu bg-green-900 border-t border-green-700 md:hidden">
+      <div class="px-4 py-3 space-y-1">
+        <a href="index.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium">
+          <i class="fas fa-home mr-2"></i>Home
+        </a>
+        <a href="travel.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium">
+          <i class="fas fa-train mr-2"></i>Travel Booking
+        </a>
+        <a href="packages.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium">
+          <i class="fas fa-suitcase mr-2"></i>Kolkata Tours
+        </a>
+        <a href="hajj-umrah.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium">
+          <i class="fas fa-mosque mr-2"></i>Hajj & Umrah
+        </a>
+        <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 text-white px-3 py-2 rounded-lg text-sm font-medium mt-2">
+          <i class="fas fa-phone"></i>+91 98765 43210
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section min-h-screen flex flex-col justify-center" style="padding-top: 90px;">
+    <!-- Real India background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80"
+           alt="Incredible India"
+           class="w-full h-full object-cover"
+           onerror="this.style.display='none'" />
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(5,46,22,0.92) 0%, rgba(15,60,30,0.88) 40%, rgba(20,83,45,0.82) 70%, rgba(5,46,22,0.90) 100%);"></div>
+    </div>
+    <!-- Decorative blurs -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full opacity-15 blur-3xl z-0"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400 rounded-full opacity-10 blur-3xl z-0"></div>
+    <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-400 rounded-full opacity-5 blur-3xl z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Hero Text -->
+        <div class="text-white fade-in-up">
+          <div class="inline-flex items-center gap-2 bg-white bg-opacity-15 border border-white border-opacity-30 backdrop-blur-sm text-orange-300 text-sm px-5 py-2 rounded-full mb-6">
+            <i class="fas fa-award text-xs text-yellow-400"></i> Trusted Since 2008 &nbsp;·&nbsp; <i class="fas fa-users text-xs"></i> 10,000+ Happy Travelers
+          </div>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-5 tracking-tight">
+            Explore<br/>
+            <span style="background: linear-gradient(135deg, #fb923c, #fbbf24, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Incredible</span><br/>
+            <span class="text-white">India</span>
+          </h1>
+          <p class="text-green-100 text-lg mb-8 leading-relaxed max-w-lg opacity-90">
+            From the bustling streets of <strong class="text-white">Kolkata</strong> to the sacred lands of <strong class="text-yellow-300">Mecca</strong> — we make every journey unforgettable. Tours, Flights, Hajj & Umrah — all under one roof.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-10">
+            <a href="packages.html" class="btn-orange px-7 py-3.5 text-base inline-flex items-center gap-2 rounded-xl">
+              <i class="fas fa-suitcase"></i> Explore Packages
+            </a>
+            <a href="hajj-umrah.html" class="inline-flex items-center gap-2 bg-white bg-opacity-15 border-2 border-white border-opacity-40 backdrop-blur-sm text-white hover:bg-opacity-25 px-7 py-3.5 rounded-xl font-semibold text-base transition-all">
+              <i class="fas fa-mosque text-yellow-300"></i> Hajj & Umrah
+            </a>
+          </div>
+          <!-- Stats row -->
+          <div class="grid grid-cols-4 gap-4 pt-8 border-t border-white border-opacity-15">
+            <div class="text-center">
+              <div class="text-3xl font-black text-orange-400 count-pulse">10K+</div>
+              <div class="text-green-200 text-xs mt-1 font-medium">Travelers</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-black text-orange-400 count-pulse" style="animation-delay:0.3s">500+</div>
+              <div class="text-green-200 text-xs mt-1 font-medium">Packages</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-black text-orange-400 count-pulse" style="animation-delay:0.6s">15+</div>
+              <div class="text-green-200 text-xs mt-1 font-medium">Yrs Exp.</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-black text-orange-400 count-pulse" style="animation-delay:0.9s">98%</div>
+              <div class="text-green-200 text-xs mt-1 font-medium">Happy</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Booking Form -->
+        <div class="glass-card rounded-3xl p-7 fade-in-up stagger-2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
+              <i class="fas fa-search text-white"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">Quick Search</h2>
+              <p class="text-gray-400 text-xs">Get instant booking assistance</p>
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="flex gap-2 mb-6 bg-gray-50 p-1 rounded-xl">
+            <button class="tab-btn flex-1 active" data-tab="travel" onclick="switchTab('travel')">
+              <i class="fas fa-train mr-1 text-xs"></i> Travel
+            </button>
+            <button class="tab-btn flex-1" data-tab="packages" onclick="switchTab('packages')">
+              <i class="fas fa-suitcase mr-1 text-xs"></i> Packages
+            </button>
+            <button class="tab-btn flex-1" data-tab="hajj" onclick="switchTab('hajj')">
+              <i class="fas fa-mosque mr-1 text-xs"></i> Hajj
+            </button>
+          </div>
+
+          <!-- Travel Tab -->
+          <div id="tab-travel" class="booking-tab-content">
+            <form onsubmit="submitQuickBooking(event, 'Travel')">
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <div>
+                  <label class="form-label">From City</label>
+                  <input type="text" class="form-input" placeholder="e.g. Kolkata" required />
+                </div>
+                <div>
+                  <label class="form-label">To City</label>
+                  <input type="text" class="form-input" placeholder="e.g. Delhi" required />
+                </div>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Travel Date</label>
+                <input type="date" class="form-input" required min="2026-01-01" />
+              </div>
+              <button type="submit" class="w-full btn-primary py-3 text-base">
+                <i class="fas fa-search mr-2"></i> Search Travel
+              </button>
+            </form>
+          </div>
+
+          <!-- Packages Tab -->
+          <div id="tab-packages" class="booking-tab-content hidden">
+            <form onsubmit="submitQuickBooking(event, 'Package')">
+              <div class="mb-3">
+                <label class="form-label">Select Package Type</label>
+                <select class="form-input">
+                  <option>Kolkata City Tour</option>
+                  <option>Heritage Tour</option>
+                  <option>Sundarbans Tour</option>
+                  <option>Darjeeling Trip</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Travel Date</label>
+                <input type="date" class="form-input" required min="2026-01-01" />
+              </div>
+              <button type="submit" class="w-full btn-primary py-3 text-base">
+                <i class="fas fa-compass mr-2"></i> Explore Packages
+              </button>
+            </form>
+          </div>
+
+          <!-- Hajj & Umrah Tab -->
+          <div id="tab-hajj" class="booking-tab-content hidden">
+            <form onsubmit="submitQuickBooking(event, 'Hajj & Umrah')">
+              <div class="mb-3">
+                <label class="form-label">Select Package</label>
+                <select class="form-input">
+                  <option>Economy Umrah Package</option>
+                  <option>Deluxe Umrah Package</option>
+                  <option>Premium Umrah Package</option>
+                  <option>Economy Hajj Package</option>
+                  <option>Premium Hajj Package</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Number of Pilgrims</label>
+                <input type="number" class="form-input" placeholder="e.g. 2" min="1" max="20" />
+              </div>
+              <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-all">
+                <i class="fas fa-paper-plane mr-2"></i> Send Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="py-16" style="background: linear-gradient(180deg, #f0fdf4 0%, #f8fafc 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header">
+        <h2>Our Travel Services</h2>
+        <div class="section-divider"></div>
+        <p>Book train tickets, flights, buses, and car rentals — all in one place</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <!-- Train -->
+        <a href="travel.html?type=train" class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block" style="height:200px;">
+          <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=600&q=80"
+               alt="Train" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#166534,#22c55e)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(22,101,52,0.88) 0%, rgba(22,101,52,0.4) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="w-10 h-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2">
+              <i class="fas fa-train text-white text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base leading-tight">Train Booking</h3>
+            <p class="text-green-200 text-xs mt-0.5">Pan India rail coverage</p>
+            <span class="inline-flex items-center gap-1 mt-2 text-xs text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Book Now <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </a>
+
+        <!-- Flight -->
+        <a href="travel.html?type=flight" class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block" style="height:200px;">
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80"
+               alt="Flight" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#1e40af,#3b82f6)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(30,64,175,0.88) 0%, rgba(30,64,175,0.4) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="w-10 h-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2">
+              <i class="fas fa-plane text-white text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base leading-tight">Flight Booking</h3>
+            <p class="text-blue-200 text-xs mt-0.5">Domestic & International</p>
+            <span class="inline-flex items-center gap-1 mt-2 text-xs text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Book Now <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </a>
+
+        <!-- Bus -->
+        <a href="travel.html?type=bus" class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block" style="height:200px;">
+          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80"
+               alt="Bus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#c2410c,#f97316)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(194,65,12,0.88) 0%, rgba(194,65,12,0.4) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="w-10 h-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2">
+              <i class="fas fa-bus text-white text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base leading-tight">Bus Booking</h3>
+            <p class="text-orange-200 text-xs mt-0.5">AC & Non-AC sleeper</p>
+            <span class="inline-flex items-center gap-1 mt-2 text-xs text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Book Now <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </a>
+
+        <!-- Car -->
+        <a href="travel.html?type=car" class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block" style="height:200px;">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80"
+               alt="Car Rental" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#6d28d9,#a855f7)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(109,40,217,0.88) 0%, rgba(109,40,217,0.4) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="w-10 h-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-2">
+              <i class="fas fa-car text-white text-lg"></i>
+            </div>
+            <h3 class="font-bold text-base leading-tight">Car Rental</h3>
+            <p class="text-purple-200 text-xs mt-0.5">Sedan, SUV & Tempo</p>
+            <span class="inline-flex items-center gap-1 mt-2 text-xs text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Book Now <i class="fas fa-arrow-right text-xs"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR DESTINATIONS ===== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header">
+        <h2>Popular Destinations</h2>
+        <div class="section-divider"></div>
+        <p>Explore India's most iconic places — from city streets to serene hilltops</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+
+        <!-- Kolkata -->
+        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
+          <img src="https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=800&q=80"
+               alt="Kolkata" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#166534,#22c55e)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="text-xs font-semibold text-orange-300 uppercase tracking-wider mb-1">West Bengal</div>
+            <h3 class="font-bold text-xl leading-tight">Kolkata</h3>
+            <p class="text-gray-300 text-xs mt-1">City of Joy • Heritage • Culture</p>
+          </div>
+          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
+        </a>
+
+        <!-- Darjeeling -->
+        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+               alt="Darjeeling" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#14532d,#16a34a)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="text-xs font-semibold text-green-300 uppercase tracking-wider mb-1">Hill Station</div>
+            <h3 class="font-bold text-xl leading-tight">Darjeeling</h3>
+            <p class="text-gray-300 text-xs mt-1">Tea Gardens • Himalayan Views</p>
+          </div>
+          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
+        </a>
+
+        <!-- Varanasi -->
+        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
+          <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=800&q=80"
+               alt="Varanasi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#c2410c,#f97316)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="text-xs font-semibold text-yellow-300 uppercase tracking-wider mb-1">Uttar Pradesh</div>
+            <h3 class="font-bold text-xl leading-tight">Varanasi</h3>
+            <p class="text-gray-300 text-xs mt-1">Sacred Ghats • Ganges Aarti</p>
+          </div>
+          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
+        </a>
+
+        <!-- Sundarbans -->
+        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
+          <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80"
+               alt="Sundarbans" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#065f46,#059669)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="text-xs font-semibold text-emerald-300 uppercase tracking-wider mb-1">Mangrove Forest</div>
+            <h3 class="font-bold text-xl leading-tight">Sundarbans</h3>
+            <p class="text-gray-300 text-xs mt-1">Royal Bengal Tiger • Boat Safari</p>
+          </div>
+          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
+        </a>
+
+        <!-- Amritsar / Golden Temple -->
+        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
+          <img src="https://images.unsplash.com/photo-1609188076864-c35269136b09?auto=format&fit=crop&w=800&q=80"
+               alt="Amritsar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#92400e,#d97706)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="text-xs font-semibold text-yellow-300 uppercase tracking-wider mb-1">Punjab</div>
+            <h3 class="font-bold text-xl leading-tight">Amritsar</h3>
+            <p class="text-gray-300 text-xs mt-1">Golden Temple • Wagah Border</p>
+          </div>
+          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
+        </a>
+
+        <!-- Kerala -->
+        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
+          <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80"
+               alt="Kerala" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#064e3b,#10b981)'" />
+          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div class="text-xs font-semibold text-teal-300 uppercase tracking-wider mb-1">God's Own Country</div>
+            <h3 class="font-bold text-xl leading-tight">Kerala</h3>
+            <p class="text-gray-300 text-xs mt-1">Backwaters • Houseboat • Beaches</p>
+          </div>
+          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED KOLKATA PACKAGES ===== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header">
+        <h2>Featured Kolkata Packages</h2>
+        <div class="section-divider"></div>
+        <p>Discover the City of Joy with our handpicked tour packages</p>
+      </div>
+      <div id="featured-packages" class="grid md:grid-cols-3 gap-6">
+        <!-- Loaded dynamically via API -->
+      </div>
+      <div class="text-center mt-10">
+        <a href="packages.html" class="btn-primary inline-flex items-center gap-2 px-8 py-3 text-base">
+          View All Packages <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HAJJ & UMRAH BANNER ===== -->
+  <section class="py-20 relative overflow-hidden">
+    <!-- Real Mecca background -->
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?auto=format&fit=crop&w=1920&q=80"
+           alt="Mecca" class="w-full h-full object-cover"
+           onerror="this.style.display='none'" />
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(69,26,3,0.93) 0%, rgba(146,64,14,0.88) 50%, rgba(120,53,15,0.93) 100%);"></div>
+    </div>
+    <div class="absolute inset-0 opacity-10">
+      <i class="fas fa-mosque text-white" style="font-size: 20rem; position:absolute; right:-50px; top:-50px; opacity:0.1;"></i>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-white">
+          <div class="inline-flex items-center gap-2 bg-white bg-opacity-20 text-yellow-200 text-sm px-4 py-1 rounded-full mb-4">
+            <i class="fas fa-moon"></i> 2025-26 Season Open
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Hajj & Umrah Packages</h2>
+          <p class="text-orange-200 text-lg mb-6 leading-relaxed">
+            Embark on the most sacred journey of your life. Our experienced team ensures a seamless, spiritually enriching pilgrimage experience.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-white">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-check text-xs text-white"></i>
+              </div>
+              Complete visa processing & documentation
+            </li>
+            <li class="flex items-center gap-3 text-white">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-check text-xs text-white"></i>
+              </div>
+              Return airfare from major Indian cities
+            </li>
+            <li class="flex items-center gap-3 text-white">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-check text-xs text-white"></i>
+              </div>
+              Hotels near Masjid al-Haram & Masjid an-Nabawi
+            </li>
+            <li class="flex items-center gap-3 text-white">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-check text-xs text-white"></i>
+              </div>
+              Experienced Islamic scholar guides
+            </li>
+          </ul>
+          <a href="hajj-umrah.html" class="btn-primary px-8 py-3 text-base inline-flex items-center gap-2">
+            <i class="fas fa-mosque"></i> View All Packages
+          </a>
+        </div>
+
+        <!-- Package preview cards -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-xl p-4 text-white">
+            <p class="text-yellow-300 text-xs font-bold mb-2">UMRAH</p>
+            <h4 class="font-semibold mb-1">Economy Package</h4>
+            <p class="text-orange-200 text-xs mb-3">15 Days • Economy Hotels</p>
+            <p class="text-2xl font-bold text-yellow-300">₹85,000</p>
+          </div>
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-xl p-4 text-white">
+            <p class="text-yellow-300 text-xs font-bold mb-2">UMRAH</p>
+            <h4 class="font-semibold mb-1">Deluxe Package</h4>
+            <p class="text-orange-200 text-xs mb-3">21 Days • 4-Star Hotels</p>
+            <p class="text-2xl font-bold text-yellow-300">₹1,20,000</p>
+          </div>
+          <div class="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-xl p-4 text-white">
+            <p class="text-yellow-300 text-xs font-bold mb-2">HAJJ</p>
+            <h4 class="font-semibold mb-1">Economy Package</h4>
+            <p class="text-orange-200 text-xs mb-3">40 Days • Standard</p>
+            <p class="text-2xl font-bold text-yellow-300">₹3,50,000</p>
+          </div>
+          <div class="bg-yellow-400 bg-opacity-20 border border-yellow-400 border-opacity-50 rounded-xl p-4 text-white">
+            <div class="flex items-center justify-between mb-1">
+              <p class="text-yellow-300 text-xs font-bold">HAJJ</p>
+              <span class="bg-yellow-400 text-yellow-900 text-xs px-2 py-0.5 rounded-full font-bold">Premium</span>
+            </div>
+            <h4 class="font-semibold mb-1">Premium Package</h4>
+            <p class="text-orange-200 text-xs mb-3">40 Days • 5-Star Hotels</p>
+            <p class="text-2xl font-bold text-yellow-300">₹5,00,000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS STRIP ===== -->
+  <div class="stats-strip py-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center relative z-10">
+        <div>
+          <div class="text-4xl font-black text-orange-400 mb-1">10K+</div>
+          <div class="text-green-200 text-sm font-medium">Happy Travelers</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-orange-400 mb-1">500+</div>
+          <div class="text-green-200 text-sm font-medium">Tour Packages</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-orange-400 mb-1">15+</div>
+          <div class="text-green-200 text-sm font-medium">Years Experience</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-orange-400 mb-1">100%</div>
+          <div class="text-green-200 text-sm font-medium">Visa Success Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header">
+        <h2>Why Choose Us</h2>
+        <div class="section-divider"></div>
+        <p>Thousands of satisfied travelers trust us for their journeys</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group text-center p-8 bg-gradient-to-b from-green-50 to-white rounded-3xl border border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300">
+          <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-all group-hover:scale-110"
+               style="background: linear-gradient(135deg, #166534, #22c55e);">
+            <i class="fas fa-shield-alt text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Trusted & Reliable</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">15+ years of experience serving 10,000+ travelers. Government recognized & licensed travel agency.</p>
+        </div>
+        <div class="group text-center p-8 bg-gradient-to-b from-blue-50 to-white rounded-3xl border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+          <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-all group-hover:scale-110"
+               style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+            <i class="fas fa-headset text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">24/7 Support</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Travel experts available round the clock via phone & WhatsApp. We're with you every step of the journey.</p>
+        </div>
+        <div class="group text-center p-8 bg-gradient-to-b from-orange-50 to-white rounded-3xl border border-orange-100 hover:border-orange-300 hover:shadow-xl transition-all duration-300">
+          <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-all group-hover:scale-110"
+               style="background: linear-gradient(135deg, #c2410c, #f97316);">
+            <i class="fas fa-tags text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Best Prices</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Best price guarantee on all packages. Found it cheaper? We'll match it. Zero hidden charges, always.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #0f2d1a 0%, #14532d 40%, #166534 100%);">
+    <!-- Decorative circles -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-orange-500 rounded-full opacity-5 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-400 rounded-full opacity-10 blur-3xl"></div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white bg-opacity-10 border border-white border-opacity-20 text-green-200 text-sm px-5 py-2 rounded-full mb-6">
+        <i class="fas fa-headset text-orange-400"></i> Available 9 AM – 9 PM, 7 days a week
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 leading-tight">Ready to Start<br/><span style="background: linear-gradient(135deg, #fb923c, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Your Journey?</span></h2>
+      <p class="text-green-200 text-lg mb-10 max-w-xl mx-auto">Talk to our travel experts and plan your perfect trip. Instant confirmation, best prices guaranteed.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="tel:+919876543210" class="flex items-center gap-3 bg-white text-green-800 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-green-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+          <i class="fas fa-phone text-green-700 text-xl"></i> +91 98765 43210
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank"
+           class="flex items-center gap-3 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
+           style="background: linear-gradient(135deg, #128c7e, #25d366);">
+          <i class="fab fa-whatsapp text-2xl"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <!-- About -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="img/logo.svg" alt="India Tours Logo" class="w-10 h-10 rounded-full" />
+            <div>
+              <span class="text-white font-bold text-lg block leading-tight">India Tours</span>
+              <span class="text-orange-400 text-xs">& Travels</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed mb-4">Your trusted travel partner since 2008. Specializing in Kolkata tours, all India travel, and Hajj & Umrah packages.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-9 h-9 bg-gray-700 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+              <i class="fab fa-twitter text-sm"></i>
+            </a>
+            <a href="#" class="w-9 h-9 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/919876543210" class="w-9 h-9 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-base">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-green-500"></i>Home</a></li>
+            <li><a href="travel.html" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-green-500"></i>Travel Booking</a></li>
+            <li><a href="packages.html" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-green-500"></i>Kolkata Packages</a></li>
+            <li><a href="hajj-umrah.html" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-green-500"></i>Hajj & Umrah</a></li>
+            <li><a href="admin/login.html" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-lock text-xs text-green-500"></i>Admin Panel</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-base">Our Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="travel.html?type=train" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-train text-xs text-green-500"></i>Train Booking</a></li>
+            <li><a href="travel.html?type=flight" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-plane text-xs text-green-500"></i>Flight Booking</a></li>
+            <li><a href="travel.html?type=bus" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-bus text-xs text-green-500"></i>Bus Booking</a></li>
+            <li><a href="travel.html?type=car" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-car text-xs text-green-500"></i>Car Rental</a></li>
+            <li><a href="hajj-umrah.html" class="hover:text-orange-400 transition-colors flex items-center gap-2"><i class="fas fa-mosque text-xs text-green-500"></i>Hajj Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-base">Contact Us</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-orange-400 mt-1 w-4"></i>
+              <span>123 Park Street, Kolkata - 700016, West Bengal, India</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-orange-400 w-4"></i>
+              <a href="tel:+919876543210" class="hover:text-orange-400">+91 98765 43210</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-orange-400 w-4"></i>
+              <a href="mailto:info@indiatours.com" class="hover:text-orange-400">info@indiatours.com</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-orange-400 w-4"></i>
+              <a href="https://wa.me/919876543210" target="_blank" class="hover:text-orange-400">WhatsApp: +91 98765 43210</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-500">© 2026 India Tours & Travels. All rights reserved.</p>
+        <p class="text-sm text-gray-500">Made with <i class="fas fa-heart text-red-500"></i> for Indian travelers</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+  <!-- ===== BOOKING MODAL ===== -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-content">
+      <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-colors">
+        <i class="fas fa-times text-sm"></i>
+      </button>
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-calendar-check text-green-700 text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">Book Your Tour</h2>
+          <p class="text-gray-500 text-sm">Fill details, we'll call you back</p>
+        </div>
+      </div>
+
+      <form id="bookingForm" onsubmit="submitBooking(event)">
+        <div class="mb-4">
+          <label class="form-label">Selected Package</label>
+          <input type="text" id="modalPackageName" class="form-input bg-gray-50" readonly />
+        </div>
+        <div id="modalPriceContainer" class="hidden mb-4 p-3 bg-orange-50 rounded-lg border border-orange-100">
+          <p class="text-sm text-gray-600">Price: <span id="modalPriceDisplay" class="font-bold text-orange-600 text-lg"></span></p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="form-label">Your Name *</label>
+            <input type="text" id="bookingName" class="form-input" placeholder="Full name" required />
+          </div>
+          <div>
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" id="bookingPhone" class="form-input" placeholder="+91 XXXXX XXXXX" required pattern="[0-9+\s]{10,15}" />
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Additional Details</label>
+          <textarea id="bookingDetails" class="form-input" rows="3" placeholder="Travel date, number of persons, special requirements..."></textarea>
+        </div>
+        <div id="bookingMessage"></div>
+        <div class="flex gap-3">
+          <button type="button" onclick="closeModal()" class="flex-1 py-3 border-2 border-gray-200 text-gray-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+            Cancel
+          </button>
+          <button type="submit" class="flex-1 btn-primary py-3 text-base">
+            <i class="fas fa-paper-plane mr-2"></i> Submit Booking
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Access Button -->
+  <a href="admin/login.html" title="Admin Panel"
+     style="position:fixed;bottom:28px;left:24px;z-index:999;background:rgba(15,45,26,0.85);color:#86efac;border:1px solid rgba(134,239,172,0.3);backdrop-filter:blur(8px);padding:6px 14px;border-radius:50px;font-size:0.72rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all 0.3s;letter-spacing:0.3px;"
+     onmouseover="this.style.background='rgba(22,101,52,0.95)';this.style.color='#fff'"
+     onmouseout="this.style.background='rgba(15,45,26,0.85)';this.style.color='#86efac'">
+    <i class="fas fa-lock" style="font-size:0.65rem;"></i> Admin
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

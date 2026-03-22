@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Booking - India Tours & Travels</title>
+  <meta name="description" content="Book train, flight, bus and car rentals with India Tours & Travels. Best rates guaranteed." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#166534', dark: '#14532d' },
+            saffron: { DEFAULT: '#ea580c', dark: '#c2410c' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-green-900 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="img/logo.svg" alt="India Tours Logo" class="w-10 h-10 rounded-full" />
+          <div>
+            <span class="text-white font-bold text-lg leading-tight block">India Tours</span>
+            <span class="text-orange-300 text-xs">& Travels</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link text-white text-sm font-medium">Home</a>
+          <a href="travel.html" class="nav-link text-white text-sm font-medium active">Travel Booking</a>
+          <a href="packages.html" class="nav-link text-white text-sm font-medium">Kolkata Tours</a>
+          <a href="hajj-umrah.html" class="nav-link text-white text-sm font-medium">Hajj & Umrah</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all">
+            <i class="fas fa-phone"></i> Call Us
+          </a>
+        </div>
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+          <i id="menuIcon" class="fas fa-bars text-white text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu bg-green-900 border-t border-green-700 md:hidden">
+      <div class="px-4 py-3 space-y-1">
+        <a href="index.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-home mr-2"></i>Home</a>
+        <a href="travel.html" class="block text-white py-2 px-3 rounded-lg bg-green-700 text-sm font-medium"><i class="fas fa-train mr-2"></i>Travel Booking</a>
+        <a href="packages.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-suitcase mr-2"></i>Kolkata Tours</a>
+        <a href="hajj-umrah.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-mosque mr-2"></i>Hajj & Umrah</a>
+        <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 text-white px-3 py-2 rounded-lg text-sm font-medium mt-2"><i class="fas fa-phone"></i>+91 98765 43210</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="pt-16 bg-gradient-to-br from-green-900 via-green-800 to-green-900 py-16 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-32 h-32 bg-orange-400 rounded-full opacity-10 blur-2xl"></div>
+      <div class="absolute bottom-10 right-10 w-48 h-48 bg-green-400 rounded-full opacity-10 blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-orange-500 bg-opacity-20 border border-orange-400 text-orange-300 text-sm px-4 py-1 rounded-full mb-4">
+        <i class="fas fa-ticket-alt text-xs"></i> Book Your Travel
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold text-white mb-3">Travel Booking</h1>
+      <p class="text-green-200 text-lg max-w-xl mx-auto">Train, Flight, Bus & Car — book all types of travel in one place</p>
+    </div>
+  </section>
+
+  <!-- ===== TRANSPORT IMAGE SHOWCASE ===== -->
+  <section class="py-10 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <!-- Train -->
+        <button onclick="switchTravelTab('train')"
+          class="travel-img-card relative rounded-2xl overflow-hidden group cursor-pointer text-left border-2 border-transparent hover:border-green-600 transition-all"
+          style="height: 200px;">
+          <img src="https://images.unsplash.com/photo-1474487548417-781cb6d646a8?auto=format&fit=crop&w=600&h=400&q=80"
+               alt="Train Booking"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#166534,#14532d)'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-train text-xs"></i>
+              </div>
+              <div>
+                <p class="font-bold text-sm leading-none">Train</p>
+                <p class="text-xs text-gray-300 leading-none mt-0.5">Pan India</p>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <!-- Flight -->
+        <button onclick="switchTravelTab('flight')"
+          class="travel-img-card relative rounded-2xl overflow-hidden group cursor-pointer text-left border-2 border-transparent hover:border-blue-600 transition-all"
+          style="height: 200px;">
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&h=400&q=80"
+               alt="Flight Booking"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#1d4ed8,#1e3a8a)'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-plane text-xs"></i>
+              </div>
+              <div>
+                <p class="font-bold text-sm leading-none">Flight</p>
+                <p class="text-xs text-gray-300 leading-none mt-0.5">Domestic & Intl</p>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <!-- Bus -->
+        <button onclick="switchTravelTab('bus')"
+          class="travel-img-card relative rounded-2xl overflow-hidden group cursor-pointer text-left border-2 border-transparent hover:border-orange-500 transition-all"
+          style="height: 200px;">
+          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&h=400&q=80"
+               alt="Bus Booking"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#ea580c,#c2410c)'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                <i class="fas fa-bus text-xs"></i>
+              </div>
+              <div>
+                <p class="font-bold text-sm leading-none">Bus</p>
+                <p class="text-xs text-gray-300 leading-none mt-0.5">AC & Non-AC</p>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <!-- Car -->
+        <button onclick="switchTravelTab('car')"
+          class="travel-img-card relative rounded-2xl overflow-hidden group cursor-pointer text-left border-2 border-transparent hover:border-purple-600 transition-all"
+          style="height: 200px;">
+          <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&h=400&q=80"
+               alt="Car Rental"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+               onerror="this.parentElement.style.background='linear-gradient(135deg,#7c3aed,#5b21b6)'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 text-white">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                <i class="fas fa-car text-xs"></i>
+              </div>
+              <div>
+                <p class="font-bold text-sm leading-none">Car Rental</p>
+                <p class="text-xs text-gray-300 leading-none mt-0.5">Sedan / SUV</p>
+              </div>
+            </div>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRAVEL BOOKING SECTION ===== -->
+  <section class="py-12">
+    <div class="max-w-4xl mx-auto px-4">
+
+      <!-- Service Tabs -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+        <div class="grid grid-cols-4 border-b border-gray-100">
+          <button class="travel-tab-btn py-4 flex flex-col items-center gap-1 text-sm font-medium transition-all border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            data-travel-tab="train" onclick="switchTravelTab('train')">
+            <i class="fas fa-train text-xl"></i>
+            <span>Train</span>
+          </button>
+          <button class="travel-tab-btn py-4 flex flex-col items-center gap-1 text-sm font-medium transition-all border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            data-travel-tab="flight" onclick="switchTravelTab('flight')">
+            <i class="fas fa-plane text-xl"></i>
+            <span>Flight</span>
+          </button>
+          <button class="travel-tab-btn py-4 flex flex-col items-center gap-1 text-sm font-medium transition-all border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            data-travel-tab="bus" onclick="switchTravelTab('bus')">
+            <i class="fas fa-bus text-xl"></i>
+            <span>Bus</span>
+          </button>
+          <button class="travel-tab-btn py-4 flex flex-col items-center gap-1 text-sm font-medium transition-all border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            data-travel-tab="car" onclick="switchTravelTab('car')">
+            <i class="fas fa-car text-xl"></i>
+            <span>Car</span>
+          </button>
+        </div>
+
+        <!-- ===== TRAIN TAB ===== -->
+        <div id="travel-tab-train" class="travel-tab-content hidden p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+              <i class="fas fa-train text-green-700 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">Train Booking</h2>
+              <p class="text-gray-500 text-sm">Book Sleeper, 3AC, 2AC or 1AC seats</p>
+            </div>
+          </div>
+          <form onsubmit="submitTravelBooking(event, 'Train Booking')">
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="form-label">From City *</label>
+                <input type="text" name="from_city" class="form-input" placeholder="e.g. Kolkata" required />
+              </div>
+              <div>
+                <label class="form-label">To City *</label>
+                <input type="text" name="to_city" class="form-input" placeholder="e.g. Delhi" required />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4 mb-4">
+              <div>
+                <label class="form-label">Date of Journey *</label>
+                <input type="date" name="date" class="form-input" required />
+              </div>
+              <div>
+                <label class="form-label">Class</label>
+                <select name="class" class="form-input">
+                  <option value="Sleeper">Sleeper (SL)</option>
+                  <option value="3AC">3rd AC (3A)</option>
+                  <option value="2AC">2nd AC (2A)</option>
+                  <option value="1AC">1st AC (1A)</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Passengers</label>
+                <input type="number" name="passengers" class="form-input" value="1" min="1" max="10" />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label class="form-label">Your Name *</label>
+                <input type="text" name="name" class="form-input" placeholder="Full name" required />
+              </div>
+              <div>
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            <div class="form-message"></div>
+            <button type="submit" class="w-full btn-primary py-3 text-base">
+              <i class="fas fa-search mr-2"></i> Search & Book Train
+            </button>
+          </form>
+        </div>
+
+        <!-- ===== FLIGHT TAB ===== -->
+        <div id="travel-tab-flight" class="travel-tab-content hidden p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+              <i class="fas fa-plane text-blue-700 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">Flight Booking</h2>
+              <p class="text-gray-500 text-sm">Domestic & International flights at best fares</p>
+            </div>
+          </div>
+          <form onsubmit="submitTravelBooking(event, 'Flight Booking')">
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="form-label">From (City or Airport) *</label>
+                <input type="text" name="from_city" class="form-input" placeholder="e.g. Kolkata (CCU)" required />
+              </div>
+              <div>
+                <label class="form-label">To (City or Airport) *</label>
+                <input type="text" name="to_city" class="form-input" placeholder="e.g. Mumbai (BOM)" required />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="form-label">Departure Date *</label>
+                <input type="date" name="date" class="form-input" required />
+              </div>
+              <div>
+                <label class="form-label">Return Date (Optional)</label>
+                <input type="date" name="return_date" class="form-input" />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="form-label">Passengers</label>
+                <input type="number" name="passengers" class="form-input" value="1" min="1" max="9" />
+              </div>
+              <div>
+                <label class="form-label">Class</label>
+                <select name="class" class="form-input">
+                  <option value="Economy">Economy</option>
+                  <option value="Business">Business Class</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label class="form-label">Your Name *</label>
+                <input type="text" name="name" class="form-input" placeholder="Full name" required />
+              </div>
+              <div>
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            <div class="form-message"></div>
+            <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold text-base transition-all">
+              <i class="fas fa-search mr-2"></i> Search & Book Flight
+            </button>
+          </form>
+        </div>
+
+        <!-- ===== BUS TAB ===== -->
+        <div id="travel-tab-bus" class="travel-tab-content hidden p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+              <i class="fas fa-bus text-orange-700 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">Bus Booking</h2>
+              <p class="text-gray-500 text-sm">AC, Non-AC & Sleeper buses for all routes</p>
+            </div>
+          </div>
+          <form onsubmit="submitTravelBooking(event, 'Bus Booking')">
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="form-label">From City *</label>
+                <input type="text" name="from_city" class="form-input" placeholder="e.g. Kolkata" required />
+              </div>
+              <div>
+                <label class="form-label">To City *</label>
+                <input type="text" name="to_city" class="form-input" placeholder="e.g. Siliguri" required />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="form-label">Date of Journey *</label>
+                <input type="date" name="date" class="form-input" required />
+              </div>
+              <div>
+                <label class="form-label">Bus Type</label>
+                <select name="bus_type" class="form-input">
+                  <option value="AC">AC Seater</option>
+                  <option value="Non-AC">Non-AC Seater</option>
+                  <option value="AC Sleeper">AC Sleeper</option>
+                  <option value="Non-AC Sleeper">Non-AC Sleeper</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label class="form-label">Your Name *</label>
+                <input type="text" name="name" class="form-input" placeholder="Full name" required />
+              </div>
+              <div>
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            <div class="form-message"></div>
+            <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold text-base transition-all">
+              <i class="fas fa-search mr-2"></i> Search & Book Bus
+            </button>
+          </form>
+        </div>
+
+        <!-- ===== CAR TAB ===== -->
+        <div id="travel-tab-car" class="travel-tab-content hidden p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+              <i class="fas fa-car text-purple-700 text-xl"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">Car Rental</h2>
+              <p class="text-gray-500 text-sm">Sedan, SUV & Tempo Traveller for all occasions</p>
+            </div>
+          </div>
+          <form onsubmit="submitTravelBooking(event, 'Car Rental')">
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="form-label">Pickup Location *</label>
+                <input type="text" name="pickup" class="form-input" placeholder="e.g. Kolkata Airport" required />
+              </div>
+              <div>
+                <label class="form-label">Drop Location *</label>
+                <input type="text" name="drop" class="form-input" placeholder="e.g. Howrah Station" required />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4 mb-4">
+              <div>
+                <label class="form-label">Pickup Date *</label>
+                <input type="date" name="date" class="form-input" required />
+              </div>
+              <div>
+                <label class="form-label">Duration</label>
+                <select name="duration" class="form-input">
+                  <option value="Half Day (4 hrs)">Half Day (4 hrs)</option>
+                  <option value="Full Day (8 hrs)">Full Day (8 hrs)</option>
+                  <option value="2 Days">2 Days</option>
+                  <option value="3 Days">3 Days</option>
+                  <option value="5+ Days">5+ Days</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Car Type</label>
+                <select name="car_type" class="form-input">
+                  <option value="Sedan">Sedan (Swift/Dzire)</option>
+                  <option value="SUV">SUV (Innova/Ertiga)</option>
+                  <option value="Tempo">Tempo Traveller (12-15 seater)</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label class="form-label">Your Name *</label>
+                <input type="text" name="name" class="form-input" placeholder="Full name" required />
+              </div>
+              <div>
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            <div class="form-message"></div>
+            <button type="submit" class="w-full bg-purple-700 hover:bg-purple-800 text-white py-3 rounded-lg font-semibold text-base transition-all">
+              <i class="fas fa-car mr-2"></i> Book Car Rental
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Why book with us -->
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+          <i class="fas fa-lock text-green-600 text-2xl mb-2"></i>
+          <h4 class="font-semibold text-gray-800 text-sm">Secure Booking</h4>
+          <p class="text-xs text-gray-500 mt-1">100% secure transactions</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+          <i class="fas fa-clock text-orange-600 text-2xl mb-2"></i>
+          <h4 class="font-semibold text-gray-800 text-sm">Quick Confirmation</h4>
+          <p class="text-xs text-gray-500 mt-1">Confirmed within 30 mins</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+          <i class="fas fa-headset text-blue-600 text-2xl mb-2"></i>
+          <h4 class="font-semibold text-gray-800 text-sm">24/7 Support</h4>
+          <p class="text-xs text-gray-500 mt-1">Always here to help</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-gray-300 pt-12 pb-8 mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+              <i class="fas fa-map-marked-alt text-white"></i>
+            </div>
+            <div>
+              <span class="text-white font-bold text-lg block leading-tight">India Tours</span>
+              <span class="text-orange-400 text-xs">& Travels</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed">Your trusted travel partner since 2008.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-orange-400 transition-colors">Home</a></li>
+            <li><a href="travel.html" class="hover:text-orange-400 transition-colors">Travel Booking</a></li>
+            <li><a href="packages.html" class="hover:text-orange-400 transition-colors">Kolkata Packages</a></li>
+            <li><a href="hajj-umrah.html" class="hover:text-orange-400 transition-colors">Hajj & Umrah</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="travel.html?type=train" class="hover:text-orange-400 transition-colors">Train Booking</a></li>
+            <li><a href="travel.html?type=flight" class="hover:text-orange-400 transition-colors">Flight Booking</a></li>
+            <li><a href="travel.html?type=bus" class="hover:text-orange-400 transition-colors">Bus Booking</a></li>
+            <li><a href="travel.html?type=car" class="hover:text-orange-400 transition-colors">Car Rental</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><i class="fas fa-phone text-orange-400"></i><a href="tel:+919876543210" class="hover:text-orange-400">+91 98765 43210</a></li>
+            <li class="flex items-center gap-2"><i class="fab fa-whatsapp text-orange-400"></i><a href="https://wa.me/919876543210" class="hover:text-orange-400">WhatsApp Us</a></li>
+            <li class="flex items-center gap-2"><i class="fas fa-envelope text-orange-400"></i><a href="mailto:info@indiatours.com" class="hover:text-orange-400">info@indiatours.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6">
+        <p class="text-sm text-gray-500 text-center">© 2026 India Tours & Travels. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+  <!-- Admin Access Button -->
+  <a href="admin/login.html" title="Admin Panel"
+     style="position:fixed;bottom:28px;left:24px;z-index:999;background:rgba(15,45,26,0.85);color:#86efac;border:1px solid rgba(134,239,172,0.3);backdrop-filter:blur(8px);padding:6px 14px;border-radius:50px;font-size:0.72rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all 0.3s;letter-spacing:0.3px;"
+     onmouseover="this.style.background='rgba(22,101,52,0.95)';this.style.color='#fff'"
+     onmouseout="this.style.background='rgba(15,45,26,0.85)';this.style.color='#86efac'">
+    <i class="fas fa-lock" style="font-size:0.65rem;"></i> Admin
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Override active state for travel tab buttons
+    document.addEventListener('DOMContentLoaded', () => {
+      const type = new URLSearchParams(window.location.search).get('type') || 'train';
+      const validTypes = ['train', 'flight', 'bus', 'car'];
+      const activeType = validTypes.includes(type.toLowerCase()) ? type.toLowerCase() : 'train';
+      switchTravelTab(activeType);
+    });
+
+    // Custom switchTravelTab with border highlight for this page
+    function switchTravelTab(tabName) {
+      document.querySelectorAll('.travel-tab-content').forEach(tab => tab.classList.add('hidden'));
+      document.querySelectorAll('.travel-tab-btn').forEach(btn => {
+        btn.classList.remove('text-green-700', 'border-green-700', 'bg-green-50');
+        btn.classList.add('text-gray-500', 'border-transparent');
+        btn.style.borderBottomColor = 'transparent';
+      });
+      const selectedTab = document.getElementById('travel-tab-' + tabName);
+      if (selectedTab) selectedTab.classList.remove('hidden');
+      const selectedBtn = document.querySelector(`[data-travel-tab="${tabName}"]`);
+      if (selectedBtn) {
+        selectedBtn.classList.remove('text-gray-500', 'border-transparent');
+        selectedBtn.classList.add('text-green-700', 'bg-green-50');
+        selectedBtn.style.borderBottomColor = '#166534';
+        selectedBtn.style.borderBottomWidth = '3px';
+      }
+    }
+  </script>
+</body>
+</html>
