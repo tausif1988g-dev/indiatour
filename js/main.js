@@ -540,7 +540,7 @@ function getPackageImage(name, category) {
   if (!name) name = '';
   const n = name.toLowerCase();
   // Specific package types → curated Unsplash photos
-  if (n.includes('sundarban')) return 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=600&q=80';
+  if (n.includes('sundarban')) return 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80';
   if (n.includes('darjeeling')) return 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80';
   if (n.includes('heritage') || n.includes('north')) return 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=600&q=80';
   if (n.includes('city') || n.includes('kolkata')) return 'https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=600&q=80';
