@@ -6,7 +6,7 @@
   <title>India Tours & Travels - Explore Incredible India</title>
   <meta name="description" content="Book tours, travel tickets, Hajj & Umrah packages with India Tours & Travels. Best prices guaranteed." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/fonts/fa/css/all.min.css" />
+  <script defer src="/fonts/fa/js/all.min.js"></script>
   <link rel="stylesheet" href="css/style.css" />
   <script>
     tailwind.config = {
@@ -66,6 +66,9 @@
         <div class="hidden md:flex items-center gap-3">
           <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all">
             <i class="fas fa-phone"></i> Call Us
+          </a>
+          <a href="admin/login.html" class="flex items-center gap-2 text-green-300 hover:text-white border border-green-600 hover:border-green-400 px-3 py-2 rounded-full text-xs font-semibold transition-all">
+            <i class="fas fa-sign-in-alt text-xs"></i> Login
           </a>
         </div>
 
@@ -370,24 +373,10 @@
           <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
         </a>
 
-        <!-- Varanasi -->
-        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
-          <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=800&q=80"
-               alt="Varanasi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-               onerror="this.parentElement.style.background='linear-gradient(135deg,#c2410c,#f97316)'" />
-          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-            <div class="text-xs font-semibold text-yellow-300 uppercase tracking-wider mb-1">Uttar Pradesh</div>
-            <h3 class="font-bold text-xl leading-tight">Varanasi</h3>
-            <p class="text-gray-300 text-xs mt-1">Sacred Ghats • Ganges Aarti</p>
-          </div>
-          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
-        </a>
-
         <!-- Sundarbans -->
         <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
-          <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80"
-               alt="Sundarbans" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80"
+               alt="Sundarbans Tiger" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                onerror="this.parentElement.style.background='linear-gradient(135deg,#065f46,#059669)'" />
           <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
@@ -398,33 +387,6 @@
           <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
         </a>
 
-        <!-- Amritsar / Golden Temple -->
-        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
-          <img src="https://images.unsplash.com/photo-1609188076864-c35269136b09?auto=format&fit=crop&w=800&q=80"
-               alt="Amritsar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-               onerror="this.parentElement.style.background='linear-gradient(135deg,#92400e,#d97706)'" />
-          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-            <div class="text-xs font-semibold text-yellow-300 uppercase tracking-wider mb-1">Punjab</div>
-            <h3 class="font-bold text-xl leading-tight">Amritsar</h3>
-            <p class="text-gray-300 text-xs mt-1">Golden Temple • Wagah Border</p>
-          </div>
-          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
-        </a>
-
-        <!-- Kerala -->
-        <a href="packages.html" class="destination-card group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 block" style="height:260px;">
-          <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80"
-               alt="Kerala" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-               onerror="this.parentElement.style.background='linear-gradient(135deg,#064e3b,#10b981)'" />
-          <div class="absolute inset-0" style="background:linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-            <div class="text-xs font-semibold text-teal-300 uppercase tracking-wider mb-1">God's Own Country</div>
-            <h3 class="font-bold text-xl leading-tight">Kerala</h3>
-            <p class="text-gray-300 text-xs mt-1">Backwaters • Houseboat • Beaches</p>
-          </div>
-          <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Explore →</div>
-        </a>
 
       </div>
     </div>
@@ -453,7 +415,7 @@
   <section class="py-20 relative overflow-hidden">
     <!-- Real Mecca background -->
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?auto=format&fit=crop&w=1920&q=80"
+      <img src="/image/pexels-mustafa-fathy-3793631-5620451.jpg"
            alt="Mecca" class="w-full h-full object-cover"
            onerror="this.style.display='none'" />
       <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(69,26,3,0.93) 0%, rgba(146,64,14,0.88) 50%, rgba(120,53,15,0.93) 100%);"></div>
@@ -762,13 +724,6 @@
     </div>
   </div>
 
-  <!-- Admin Access Button -->
-  <a href="admin/login.html" title="Admin Panel"
-     style="position:fixed;bottom:28px;left:24px;z-index:999;background:rgba(15,45,26,0.85);color:#86efac;border:1px solid rgba(134,239,172,0.3);backdrop-filter:blur(8px);padding:6px 14px;border-radius:50px;font-size:0.72rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all 0.3s;letter-spacing:0.3px;"
-     onmouseover="this.style.background='rgba(22,101,52,0.95)';this.style.color='#fff'"
-     onmouseout="this.style.background='rgba(15,45,26,0.85)';this.style.color='#86efac'">
-    <i class="fas fa-lock" style="font-size:0.65rem;"></i> Admin
-  </a>
 
   <script src="js/main.js"></script>
 </body>

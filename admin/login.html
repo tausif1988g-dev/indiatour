@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Login - India Tours & Travels</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/fonts/fa/css/all.min.css" />
+  <script defer src="/fonts/fa/js/all.min.js"></script>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body class="min-h-screen bg-gradient-to-br from-green-900 via-green-800 to-green-900 flex items-center justify-center p-4">
@@ -75,15 +75,6 @@
         </button>
       </form>
 
-      <div class="mt-6 pt-6 border-t border-gray-100">
-        <div class="bg-gray-50 rounded-xl p-4">
-          <p class="text-xs text-gray-500 font-medium mb-2">
-            <i class="fas fa-info-circle text-green-600 mr-1"></i> Default Credentials:
-          </p>
-          <p class="text-xs text-gray-600 font-mono">Email: admin@indiatours.com</p>
-          <p class="text-xs text-gray-600 font-mono">Password: admin123</p>
-        </div>
-      </div>
     </div>
 
     <!-- Back to site -->
@@ -95,7 +86,7 @@
   </div>
 
   <script>
-    const API_BASE = 'http://localhost:3000/api';
+    const API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : '/api';
 
     // Toggle password visibility
     document.getElementById('togglePassword').addEventListener('click', function() {
