@@ -24,21 +24,21 @@
 <body class="bg-amber-50">
 
   <!-- ===== NAVBAR ===== -->
-  <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-green-900 shadow-lg">
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="index.html" class="flex items-center gap-3">
           <img src="img/logo.svg" alt="India Tours Logo" class="w-10 h-10 rounded-full" />
           <div>
-            <span class="text-white font-bold text-lg leading-tight block">India Tours</span>
+            <span class="text-sky-800 font-bold text-lg leading-tight block">India Tours</span>
             <span class="text-orange-300 text-xs">& Travels</span>
           </div>
         </a>
         <div class="hidden md:flex items-center gap-6">
-          <a href="index.html" class="nav-link text-white text-sm font-medium">Home</a>
-          <a href="travel.html" class="nav-link text-white text-sm font-medium">Travel Booking</a>
-          <a href="packages.html" class="nav-link text-white text-sm font-medium">Kolkata Tours</a>
-          <a href="hajj-umrah.html" class="nav-link text-white text-sm font-medium active">Hajj & Umrah</a>
+          <a href="index.html" class="nav-link text-sky-900 text-sm font-medium">Home</a>
+          <a href="travel.html" class="nav-link text-sky-900 text-sm font-medium">Travel Booking</a>
+          <a href="packages.html" class="nav-link text-sky-900 text-sm font-medium">Kolkata Tours</a>
+          <a href="hajj-umrah.html" class="nav-link text-sky-900 text-sm font-medium active">Hajj & Umrah</a>
         </div>
         <div class="hidden md:flex">
           <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all">
@@ -46,16 +46,16 @@
           </a>
         </div>
         <button onclick="toggleMobileMenu()" class="md:hidden p-2">
-          <i id="menuIcon" class="fas fa-bars text-white text-xl"></i>
+          <i id="menuIcon" class="fas fa-bars text-sky-900 text-xl"></i>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="mobile-menu bg-green-900 border-t border-green-700 md:hidden">
+    <div id="mobileMenu" class="mobile-menu bg-white border-t border-sky-100 md:hidden" style="box-shadow: 0 8px 24px rgba(3,105,161,0.1);">
       <div class="px-4 py-3 space-y-1">
-        <a href="index.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-home mr-2"></i>Home</a>
-        <a href="travel.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-train mr-2"></i>Travel Booking</a>
-        <a href="packages.html" class="block text-white py-2 px-3 rounded-lg hover:bg-green-700 text-sm font-medium"><i class="fas fa-suitcase mr-2"></i>Kolkata Tours</a>
-        <a href="hajj-umrah.html" class="block text-white py-2 px-3 rounded-lg bg-green-700 text-sm font-medium"><i class="fas fa-mosque mr-2"></i>Hajj & Umrah</a>
+        <a href="index.html" class="block text-sky-900 py-2 px-3 rounded-lg hover:bg-sky-50 text-sm font-medium"><i class="fas fa-home mr-2"></i>Home</a>
+        <a href="travel.html" class="block text-sky-900 py-2 px-3 rounded-lg hover:bg-sky-50 text-sm font-medium"><i class="fas fa-train mr-2"></i>Travel Booking</a>
+        <a href="packages.html" class="block text-sky-900 py-2 px-3 rounded-lg hover:bg-sky-50 text-sm font-medium"><i class="fas fa-suitcase mr-2"></i>Kolkata Tours</a>
+        <a href="hajj-umrah.html" class="block text-white py-2 px-3 rounded-lg bg-sky-700 text-sm font-medium"><i class="fas fa-mosque mr-2"></i>Hajj & Umrah</a>
         <a href="tel:+919876543210" class="flex items-center gap-2 bg-orange-500 text-white px-3 py-2 rounded-lg text-sm font-medium mt-2"><i class="fas fa-phone"></i>+91 98765 43210</a>
       </div>
     </div>
@@ -90,7 +90,7 @@
           <i class="fas fa-mosque"></i> View Packages
         </a>
         <a href="https://wa.me/919876543210?text=I'm%20interested%20in%20Hajj/Umrah%20package" target="_blank"
-          class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-8 py-3 rounded-lg font-semibold text-base transition-all">
+          class="inline-flex items-center gap-2 bg-sky-500 hover:bg-green-400 text-white px-8 py-3 rounded-lg font-semibold text-base transition-all">
           <i class="fab fa-whatsapp text-xl"></i> WhatsApp Enquiry
         </a>
       </div>
@@ -213,16 +213,16 @@
         <div class="section-divider"></div>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-green-50 border border-green-100 rounded-2xl p-6">
-          <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-            <i class="fas fa-plane text-green-700 text-2xl"></i>
+        <div class="bg-sky-50 border border-sky-100 rounded-2xl p-6">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-plane text-sky-700 text-2xl"></i>
           </div>
           <h3 class="font-bold text-gray-800 text-lg mb-3">Flights</h3>
           <ul class="space-y-2 text-sm text-gray-600">
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Return flights from Kolkata</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Baggage allowance included</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Airport assistance & transfers</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Business class option available</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-sky-600"></i> Return flights from Kolkata</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-sky-600"></i> Baggage allowance included</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-sky-600"></i> Airport assistance & transfers</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-sky-600"></i> Business class option available</li>
           </ul>
         </div>
         <div class="bg-orange-50 border border-orange-100 rounded-2xl p-6">
@@ -275,13 +275,13 @@
               </div>
             </div>
             <div class="bg-white rounded-xl p-4 border border-amber-100 flex items-start gap-4">
-              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-mosque text-green-600"></i>
+              <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-mosque text-sky-600"></i>
               </div>
               <div>
                 <h4 class="font-semibold text-gray-800">Hajj 2026</h4>
                 <p class="text-gray-500 text-sm">Expected: May-June 2026</p>
-                <p class="text-green-600 text-sm font-medium mt-1">Register Early — Limited Seats</p>
+                <p class="text-sky-600 text-sm font-medium mt-1">Register Early — Limited Seats</p>
               </div>
             </div>
             <div class="bg-white rounded-xl p-4 border border-amber-100 flex items-start gap-4">
@@ -304,21 +304,21 @@
           </h2>
           <div class="space-y-3">
             <div class="flex items-start gap-4">
-              <div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+              <div class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
               <div class="bg-white rounded-xl p-4 border border-amber-100 flex-1">
                 <h4 class="font-semibold text-gray-800 text-sm">Submit Documents</h4>
                 <p class="text-gray-500 text-xs mt-1">Passport, photos, vaccination certificate</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+              <div class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
               <div class="bg-white rounded-xl p-4 border border-amber-100 flex-1">
                 <h4 class="font-semibold text-gray-800 text-sm">Biometric Registration</h4>
                 <p class="text-gray-500 text-xs mt-1">At Saudi consulate or authorized center</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+              <div class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
               <div class="bg-white rounded-xl p-4 border border-amber-100 flex-1">
                 <h4 class="font-semibold text-gray-800 text-sm">Visa Processing</h4>
                 <p class="text-gray-500 text-xs mt-1">7-15 working days (we handle everything)</p>
@@ -347,7 +347,7 @@
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
         <a href="https://wa.me/919876543210?text=Assalamu%20Alaikum!%20I'm%20interested%20in%20Hajj/Umrah%20packages." target="_blank"
-          class="flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg">
+          class="flex items-center gap-3 bg-sky-500 hover:bg-green-400 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg">
           <i class="fab fa-whatsapp text-2xl"></i> WhatsApp for Hajj/Umrah
         </a>
         <a href="tel:+919876543210"
@@ -378,7 +378,7 @@
           <p class="text-sm text-gray-400">Your trusted Hajj & Umrah partner since 2008.</p>
           <div class="flex gap-3 mt-4">
             <a href="#" class="w-9 h-9 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
-            <a href="https://wa.me/919876543210" class="w-9 h-9 bg-gray-700 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors"><i class="fab fa-whatsapp text-sm"></i></a>
+            <a href="https://wa.me/919876543210" class="w-9 h-9 bg-gray-700 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors"><i class="fab fa-whatsapp text-sm"></i></a>
             <a href="#" class="w-9 h-9 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center transition-colors"><i class="fab fa-instagram text-sm"></i></a>
           </div>
         </div>
